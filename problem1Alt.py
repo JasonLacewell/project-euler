@@ -5,26 +5,20 @@ import time
 
 start_time = time.time()
 
-n = 1
 sum = 0
+i = 3
+j = 5
 
-while n < 200:
-    sum += 8*n 
-    n += 1
-
-while n < 334:
-    sum += 3*n
-    n += 1
-
-n = 1
-
-while n < 67:
-    sum -= 15*n
-    n += 1
-
-end_time = time.time()
-print(sum, f"{end_time - start_time:.6f} seconds")
-
-#this just feels like I did this the hard way!
+while j <= 1000:
+    while i < j:
+        sum += i
+        i += 3
+    if i != j:
+        sum += j
+    j += 5
     
+end_time = time.time()
+print(sum - 1000, f"{end_time - start_time:.6f} seconds")
+
+
 
