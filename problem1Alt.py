@@ -16,9 +16,11 @@ while j <= 1000:
     if i != j:
         sum += j
     j += 5
-    
+
 end_time = time.time()
 print(sum - 1000, f"{end_time - start_time:.6f} seconds")
+
+#hahahaha! I actually made it slower!!!!!!!
 
 
 

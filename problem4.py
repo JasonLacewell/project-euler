@@ -1,18 +1,21 @@
 import math
 import time
-
+import sys
 start_time = time.time()
 
 largest_palindrome = [0, 0, 0]
 
 def palindrome_checker(a, b):
+    global largest_palindrome
     n = a*b
     n_str = str(n)
-   
+    if n < largest_palindrome[0]:
+        print(largest_palindrome[0])
+        sys.exit()
     for i in range(len(n_str)//2):
         if n_str[i] != n_str[-1-i]:
             return
-    global largest_palindrome
+    
     if n > largest_palindrome[0]:
         largest_palindrome[0] = n
         largest_palindrome[1] = a
